@@ -1,0 +1,41 @@
+
+Tottoise Git
+
+	Configuration et initialisation
+	
+	  -- Première utilisation de TortoiseGit. 
+	  
+	  Menu Démarrer / Dossier TortoiseGit / Setting
+	  
+	  Onglet Git
+	  
+	      Source de configuration = Global
+		  
+		  Informations de l'utilisateur
+		      Nom          : JF Enond                                                         $ git config --global user.name "JF Enond"
+			  Email        : adresse@email.fr                                                 $ git confif --global user.email "adresse@email.fr"
+
+			  
+			  
+    Proget existant sur serveur d'applis - Cloner un dépôt
+   
+      -- Quand il y a une demande redmine sur un projet existant 
+   
+      Sur dossier destination du projet
+	  Click-droit sur le dossier
+        Git Cloner : récupère la version sur le serveur l'appli --> vers poste développeur      $ git clone git://ServeurApplis/Projet
+   
+   Projet inexistant sur le serveur d'applis
+   
+      -- Création d'un nouveau projet
+   
+      Créer un dossier
+	  Click-droit sur ce dossier
+        Git Créer un dépot ici (ne pas cocher la case "Partir de rien")                         $ git init
+   
+   Committing les changements : Indiquer les chagements apportés dans un dossier
+   
+       -- Modification des éléments d'un projet
+	   
+       Click-droit sur le dossier à mettre à jour
+	      Git livrer --> "master" (= commit)         -- (Correspond à nos changelog)

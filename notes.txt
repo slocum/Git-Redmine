@@ -1,0 +1,60 @@
+http://blog.ippon.fr/2011/04/28/git-un-retour-dexperience/
+
+-----------
+ Workflow
+-----------
+     La définition d'un workflow aujourd'hui devra peut-être être modifié pour être adapté à une réalité du terrain.
+
+     Serveur                                                      Postes programmeurs
+
+       Version déployable
+
+
+                 Version relase ?
+
+
+                         version developpement (en test) 
+
+                                                                   version developpement + branche de la fonctionnalité     
+
+
+
+
+
+
+
+
+Création d'un projet           --> Poste local
+Développement du projet        --> Poste local
+Envois de la version à tester  --> Dépôt distant - sur Branch Test
+
+                                   --> Le testeur récupère la version de test                      --> Sur poste local
+                                   --> Le testeur met à jour les fiches de recettage
+                                   --> Le testeur transmet les fiches de recettage au débogueur
+
+Si débogueur <> développeur récupère le version de test  --> Sur poste local
+Le débogueur apporte ses modifications                   --> Sur poste local 
+Le débogueur note dans changelog ses modifications       --> sur poste local
+Le débogueur renvoie la version à tester                 --> Dépôt distant - sur Branch Test
+
+                                   --> Le testeur récupère la version à tester                     --> Sur poste local
+                                   --> Le testeur valide la version
+                                   --> Le testeur réintégre la branch Test -> Branch master        --> Dépôt Distant
+   
+                                   --> Installation de la version                                  --> Sur poste utilisateur
+                                   --> L'utilisateur renvoi ses remarques
+
+Le débogueur crée une version de test               --> Dépôt distant - Sur Branch Test
+Le débogueur récupère la version de test            --> Sur poste local
+Le débogueur apporte ses modifications              --> sur poste local
+Le débogueur note dans changelog ses modifications  --> sur poste local
+Le débogueur renvoie la version à tester            --> Dépôt distant - sur Branch Test
+
+
+
+                                   --> Le testeur récupère la version à tester                     --> Sur poste local
+                                   --> Le testeur valide la version
+                                   --> Le testeur réintégre la branch Test -> Branch master        --> Dépôt Distant
+   
+                                   --> Installation de la version                                  --> Sur poste utilisateur
+                                   --> L'utilisateur renvoi ses remarques

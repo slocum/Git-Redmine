@@ -1,0 +1,100 @@
+TortoiseGit
+
+  TortoiseGit est une extention Graphique pour utiliser Git. Cette interface graphique est plus pratique que les commandes en ligne de Git et permet de travaioller directement avec l'explorateur Windows.
+
+  TortoiseGit permet de controler les versions dees fichiers.
+  Il permet de :
+    - retrouver des vieilles versions de fichiers ;
+    - retrouver l'historique des modifications
+    - savoir qui a fait les modifications ;
+    - savoir quand les modifications ontr été faites
+
+
+Création d'un dossier projet sur le serveur d'appli
+Copie des premiers fichier du projet
+
+Création d'un Repository Git
+
+   1 - Initialiser un nouveau Repository Git  (sur le serveur d'appli)
+       
+       git init
+
+
+   2 - cloner un Repository Git déjà existant sur le serveur d'appli ---> vers le poste de travail
+
+       git clone
+
+
+Workflow normal
+
+    1 - Récupération de la version en prod sur le serveur d'appli
+
+	git clone ServeurAppli/dossiers/projet PosteTravail/dossiers/Projet
+    
+    2 - Création d'une branche
+
+        git branch TravailEnCours
+        git checkout TravailEnCours
+
+    3 - Modifications dans VB
+
+    4 - Ajout des fichiers modifiés à l'index
+
+        git add fichier1 fichier2 fichier3
+
+    5 - réaliser définitivement les fichiers de l'index
+
+        git commit
+
+      5.1 - Création d'un tag si nécessaire (ex une nouvelle version)
+
+            git tag "Version 1.1"
+
+    6 - Recombiner la branche TravailEnCours avec la branche Master
+
+	git checkout master
+        git commit -a
+        git merge TravailEnCours
+        git branch -d TravailEncours
+
+    7 - Repositionne les commit sur le Dépot du projet sur le serveur d'appli
+
+        git push ServeurAppli/dossiers/projet master
+
+
+
+
+Branche et intégration des branches
+
+    1 - Création d'une branch
+
+        git branch NomBranch
+
+    2 - Liste des branches existantes
+
+        git branch
+
+    3 - Basculer sur une branche
+
+        git checkout NomBranch
+
+    4 - Commiter la branche
+    
+        git commit -a
+        git checkout master
+        git commit -a
+
+    5 - Intégration de la branche à la branche master       
+
+        git merge NomBranch
+
+    6 - Suppression de la branch
+
+        git branch -d NomBranch           (la changements ont été transféré sur la branche principale)
+
+        git branch -D NomBranchEssai      (Suppression d'une branche sans prendre en compte les changements)
+
+
+Historique des commit 
+
+    git log
