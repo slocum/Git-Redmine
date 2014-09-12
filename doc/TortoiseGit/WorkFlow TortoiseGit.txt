@@ -12,7 +12,7 @@ Tottoise Git
 	      Source de configuration = Global
 		  
 		  Informations de l'utilisateur
-		      Nom          : JF Enond                                                         $ git config --global user.name "JF Enond"
+		          Nom          : JF Enond                                                         $ git config --global user.name "JF Enond"
 			  Email        : adresse@email.fr                                                 $ git confif --global user.email "adresse@email.fr"
 
 			  
@@ -32,6 +32,18 @@ Tottoise Git
       Créer un dossier
 	  Click-droit sur ce dossier
         Git Créer un dépot ici (ne pas cocher la case "Partir de rien")                         $ git init
+
+
+
+   Ajout des fichiers à indexer
+
+     -- Ajout des fichiers qu'on souhaite intégrer dans le prochain Commit                       $ git add file1 File2 file3
+
+
+    Sur le chier à ajouter
+       Click-droit : 
+          Menu popup / TortoiseGit / Ajourter...
+   
    
    Committing les changements : Indiquer les chagements apportés dans un dossier
    
