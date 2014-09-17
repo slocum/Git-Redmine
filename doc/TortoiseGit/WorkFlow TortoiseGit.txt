@@ -12,11 +12,11 @@ Tottoise Git
 	      Source de configuration = Global
 		  
 		  Informations de l'utilisateur
-		          Nom          : JF Enond                                                         $ git config --global user.name "JF Enond"
-			  Email        : adresse@email.fr                                                 $ git confif --global user.email "adresse@email.fr"
+	        Nom          : JF Enond                                                          $ git config --global user.name "JF Enond"
+                Email        : adresse@email.fr                                                  $ git confif --global user.email "adresse@email.fr"
 
 			  
-			  
+----------------------------------------------------------------------------------------------------------------------------------------------------------			  
     Proget existant sur serveur d'applis - Cloner un dépôt
    
       -- Quand il y a une demande redmine sur un projet existant 
@@ -33,7 +33,7 @@ Tottoise Git
 	  Click-droit sur ce dossier
         Git Créer un dépot ici (ne pas cocher la case "Partir de rien")                         $ git init
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
    Ajout des fichiers à indexer
 
@@ -42,12 +42,59 @@ Tottoise Git
 
     Sur le chier à ajouter
        Click-droit : 
-          Menu popup / TortoiseGit / Ajourter...
+          Menu popup / TortoiseGit / Ajouter...
    
    
    Committing les changements : Indiquer les chagements apportés dans un dossier
    
        -- Modification des éléments d'un projet
+
 	   
        Click-droit sur le dossier à mettre à jour
-	      Git livrer --> "master" (= commit)         -- (Correspond à nos changelog)
+	      Git livrer --> "master"  -- (Correspond à nos changelog)
+
+              Liste des fichiers qui apparaissent                                                  $ git dif --cached
+              Bouton entrée                                                                        $ git commit
+
+
+              Info message : 1ère ligne courte résumé
+                             2ème ligne vide
+                             Le reste description plus complète.
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+http://joelabrahamsson.com/remote-branches-with-tortoisegit/
+
+   Créer une branche
+
+     -- Permet de travail sur une version différente de la master (celle en production)
+
+     Click-droit sur le dossier du projet :
+     Menu popup : / TortoiseGit / Créer une branche
+
+        Nom : Dev
+        Basé sur HEAD (branche en cours)
+        Basculer vers une nouvelle branche
+
+        Bouton OK                                                                                   $ git branch Dev
+                                                                                                    $ git checkout Dev 
+
+  Voir la liste des branches
+
+    -- Permet de connaître les branches existantes.
+
+
+     Click-droit sur le dossier du projet :
+     Menu popup : / TortoiseGit / Graphe des révisions                                              $ git branch
+
+       En rouge la branche active
+       Avec le click-droit sur le graphe, on peut manipuler les branches.                           $ git checkout (la branche sur laquelle on veut basculer)
+
+
+
+  Fusionner les 2 branches (merger)
+
+    -- Permet d'intégrer les modifications apportées sur la branche Dev sur master
+
