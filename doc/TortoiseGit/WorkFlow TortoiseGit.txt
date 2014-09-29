@@ -62,6 +62,32 @@ Tottoise Git
                              Le reste description plus complète.
 
 
+   Pousser le code vers le serveur distant
+
+       -- Permet de mettre à jour les commit du repesory local vers le dépôt d'origine du serveur distant.
+
+       Click-droit sur le dossier à mettre à jour
+               Git Sync...
+
+               Bouton "Pousser" 
+        
+               URL distance : Adresse du serveur distant / nom du projet                            $ git push
+
+
+   Récupérer (Tirer) le code du serveur distant 
+
+       -- Permet de récupérer le code du serveur distant
+
+       Click-droit sur le dossier à mettre à jour
+               Git Sync...
+
+               Bouton "Tirer"
+        
+               URL distance : Adresse du serveur distant / nom du projet                            $ git pull
+
+
+
+
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
